@@ -1,1 +1,53 @@
-<h1> Spring Boot </h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>CodeBlog-Post</title>
+<!-- CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+</head>
+<body>
+	<header>
+		<!-- Navbar -->
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand mb-0 h1" style="font-weight: bold;" href="#">Gaia</a>
+		</nav>
+	</header>
+	<section>
+		<div class="container" style="width: 60%; padding-bottom: 30px;">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb"
+					style="background-color: white; padding-left: 0px;">
+					<li class="breadcrumb-item " aria-current="page"><a
+						href="/posts">Posts</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Novo
+						Post</li>
+
+				</ol>
+			</nav>
+
+			<div>
+				<form method="post">
+					<div class="form-group">
+						<input type="text" class="form-control" name="titulo"
+							placeholder="Titulo *" required="">
+					</div> 
+
+					<div class="form-group">
+						<input type="text" class="form-control" name="autor"
+							placeholder="Autor *" required="">
+					</div>
+					<textarea type="text" class="form-control" name="texto"placeholder="Texto *" required=""></textarea>
+					<small class="form-text text-muted">[*]Campos Obrigatorios</small>
+					<button type="submit" class="btn btn-primary" style="margin-top: 10px;">Publicar</button>
+					<a href="/posts" class="btn btn-light" role="button" style="margin-top: 10px;">Cancelar</a>
+				</form>
+			</div>
+
+		</div>
+	</section>
+</html>
