@@ -14,7 +14,8 @@
 	<header>
 		<!-- Navbar -->
 		<nav class="navbar navbar-light bg-light">
-			<a class="navbar-brand" href="#">Gaia</a>
+			<a class="navbar-brand mb-0 h1" style="font-weight: bold;" href="#">Gaia</a>
+			<a href="/newpost" class="btn btn-primary" role="button">Novo Post</a>
 		</nav>
 	</header>
 	<section>
@@ -33,7 +34,7 @@
 				</p>
 				
 				
-				<a href="#"><h4 class="card-title" style="font-weight: bold; color:black; padding-top: 5px;"> 
+				<a th:href="${(#mvc.url('CC#getPostDetails').arg(0, post.id)).build()}"><h4 class="card-title" style="font-weight: bold; color:black; padding-top: 5px;"> 
 				<span th:text="${post.titulo}"></span>
 				</h4></a>
 				
