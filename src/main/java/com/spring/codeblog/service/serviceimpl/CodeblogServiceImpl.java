@@ -10,11 +10,11 @@ import com.spring.codeblog.repository.CodeblogRepository;
 import com.spring.codeblog.service.CodeblogService;
 
 @Service
-public class CodeblogServiceImpl implements CodeblogService{
-	
+public class CodeblogServiceImpl implements CodeblogService {
+
 	@Autowired
 	CodeblogRepository codeblogRepository;
-	
+
 	@Override
 	public List<Post> findAll() {
 		return codeblogRepository.findAll();
@@ -28,10 +28,7 @@ public class CodeblogServiceImpl implements CodeblogService{
 
 	@Override
 	public Post save(Post post) {
-		// TODO Auto-generated method stub
 		return codeblogRepository.save(post);
 	}
 
-	
-	
 }
